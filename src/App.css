@@ -1,38 +1,243 @@
-.App {
+.anim_gradient {
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90deg, #de26a0 0%, #068ff1 100%);
+}
+.Title {
+  position: absolute;
+  z-index: 1;
+  height: 10vh;
+  width: 100vw;
+
+  font-size: 50px;
+  font-family: "Pacifico", cursive;
+  margin: 0 auto;
   text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+
+  color: black;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px rgb(39, 45, 162), 0 0 82px rgb(19, 31, 96),
+    0 0 92px rgb(255, 255, 255), 0 0 102px rgb(255, 255, 255),
+    0 0 151px rgb(255, 255, 255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#calcBorder {
+  position: absolute;
+  height: 78vh;
+  width: 28vw;
+  background-color: black;
+  border-radius: 50px;
+  z-index: 2;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.35fr 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topPortion {
+  grid-area: 1 / 1 / 2 / 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#equationBar {
+  height: 50%;
+  width: 99%;
   color: white;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  padding-left: 5%;
+}
+.bottomPortion {
+  grid-area: 2 / 1 / 3 / 2;
+  display: grid;
+  grid-template-columns: repeat(4, 0.25fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.div4 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.div5 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div6 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div7 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.div8 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.div9 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.div10 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.div11 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.div12 {
+  grid-area: 3 / 4 / 4 / 5;
+}
+.div13 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+.div14 {
+  grid-area: 4 / 2 / 5 / 3;
+}
+.div15 {
+  grid-area: 4 / 3 / 5 / 4;
+}
+.div16 {
+  grid-area: 4 / 4 / 5 / 5;
+}
+.div17 {
+  grid-area: 5 / 1 / 6 / 2;
+  grid-column: span 2;
 }
 
-.App-link {
-  color: #61dafb;
+.div19 {
+  grid-area: 5 / 3 / 6 / 4;
+}
+.div20 {
+  grid-area: 5 / 4 / 6 / 5;
+}
+.div21 {
+  grid-area: 6 / 1 / 7 / 2;
+}
+.div22 {
+  grid-area: 6 / 2 / 7 / 3;
+}
+.div23 {
+  grid-area: 6 / 3 / 7 / 4;
+}
+.div24 {
+  grid-area: 6 / 4 / 7 / 5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dot-1,
+.dot-2,
+.dot-3,
+.dot-4,
+.dot-5,
+.dot-6,
+.dot-7,
+.dot-8,
+.dot-9,
+.dot-10,
+.dot-11,
+.dot-12,
+.dot-13,
+.dot-14,
+.dot-15,
+.dot-16,
+.dot-18,
+.dot-19,
+.dot-20 {
+  color: white;
+  height: 85%;
+  width: 70%;
+  border-radius: 70px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 70px;
+  padding: 0 auto;
+  border: 2px solid transparent;
+  transition: border-color 0.5s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+}
+
+.dot-1,
+.dot-2,
+.dot-3 {
+  background-color: #e4e6e5;
+  color: black;
+}
+
+.dot-5,
+.dot-6,
+.dot-7,
+.dot-9,
+.dot-10,
+.dot-11,
+.dot-13,
+.dot-14,
+.dot-15,
+.dot-17,
+.dot-19 {
+  background-color: #626365;
+}
+
+.dot-4,
+.dot-8,
+.dot-12,
+.dot-16,
+.dot-20 {
+  background-color: #e8830e;
+}
+
+.dot-1:hover,
+.dot-2:hover,
+.dot-3:hover,
+.dot-4:hover,
+.dot-5:hover,
+.dot-6:hover,
+.dot-7:hover,
+.dot-8:hover,
+.dot-9:hover,
+.dot-10:hover,
+.dot-11:hover,
+.dot-12:hover,
+.dot-13:hover,
+.dot-14:hover,
+.dot-15:hover,
+.dot-16:hover,
+.dot-18:hover,
+.dot-19:hover,
+.dot-20:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+.dot-17 {
+  color: white;
+  height: 85%;
+  width: 95%;
+  border-radius: 70px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 70px;
+  padding: 0 auto;
+  border: 2px solid transparent;
+  transition: border-color 0.5s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+}
+
+.dot-17:hover {
+  border-color: white;
+  cursor: pointer;
 }
